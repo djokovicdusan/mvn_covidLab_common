@@ -38,7 +38,7 @@ public class Test implements OpstiDomenskiObjekat {
 	String uputstvoZaUpotrebu;
 
 	/**
-	 * Parameterized constructor used for initialization of Patient type objects and
+	 * Parameterized constructor used for initialization of Test type objects and
 	 * setting them to given values.
 	 * 
 	 * @param testId             Test's id as a Long.
