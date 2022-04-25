@@ -11,7 +11,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Class that represents a model for covid 19 labaratory test.
+ * Class that represents a model for Covid 19 laboratory test.
  * 
  * @author Dule Djo
  */
