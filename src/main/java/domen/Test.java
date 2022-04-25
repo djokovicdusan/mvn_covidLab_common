@@ -56,7 +56,7 @@ public class Test implements OpstiDomenskiObjekat {
 	}
 
 	/**
-	 * Non-parameterized constructor used for initialization of Pacient type
+	 * Non-parameterized constructor used for initialization of Test type
 	 * objects.
 	 */
 	public Test() {
