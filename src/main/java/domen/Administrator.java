@@ -14,7 +14,6 @@ import java.util.Objects;
 /**
  * Class that represents a model for Covid 19 Labaratory system Administrator.
  * 
- * 
  * @author Dule Djo
  */
 public class Administrator implements OpstiDomenskiObjekat {
@@ -61,7 +60,7 @@ public class Administrator implements OpstiDomenskiObjekat {
 	/**
 	 * Returns Administrator's username.
 	 * 
-	 * @return korisnickoIme  Username as a String.
+	 * @return korisnickoIme Username as a String.
 	 */
 	public String getKorisnickoIme() {
 		return korisnickoIme;
@@ -79,7 +78,7 @@ public class Administrator implements OpstiDomenskiObjekat {
 	/**
 	 * Returns Administrator's password.
 	 * 
-	 * @return lozinka  Password as a String.
+	 * @return lozinka Password as a String.
 	 */
 	public String getLozinka() {
 		return lozinka;
@@ -88,7 +87,7 @@ public class Administrator implements OpstiDomenskiObjekat {
 	/**
 	 * Returns Administrator's first name.
 	 * 
-	 * @return ime  First name as a String.
+	 * @return ime First name as a String.
 	 */
 	public String getIme() {
 		return ime;
@@ -97,7 +96,7 @@ public class Administrator implements OpstiDomenskiObjekat {
 	/**
 	 * Returns Administrator's last name.
 	 * 
-	 * @return prezime  Last name as a String.
+	 * @return prezime Last name as a String.
 	 */
 	public String getPrezime() {
 		return prezime;
@@ -120,6 +119,7 @@ public class Administrator implements OpstiDomenskiObjekat {
 	public void setPrezime(String prezime) {
 		this.prezime = prezime;
 	}
+
 	/**
 	 * Sets the Administrator's password.
 	 * 
@@ -152,6 +152,7 @@ public class Administrator implements OpstiDomenskiObjekat {
 		}
 		return true;
 	}
+
 	/**
 	 * Returns the Administrator's full name.
 	 * 
