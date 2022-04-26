@@ -81,7 +81,11 @@ class TerminTestiranjaTest {
 		assertEquals(new Laborant(), terminTestiranja.getLaborant());
 	}
 
+	@Test
 	void testToString() {
+		terminTestiranja = new TerminTestiranja((long) 15, new Date(1999, 16, 6), "test", new Pacijent(),
+				new Laborant());
+
 		terminTestiranja.getPacijent().setIme("Pera");
 		String test = terminTestiranja.toString();
 		assertTrue(test.contains("Pera"));
