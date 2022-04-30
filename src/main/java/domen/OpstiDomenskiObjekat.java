@@ -29,7 +29,7 @@ public interface OpstiDomenskiObjekat extends Serializable {
 	/**
 	 * Returns a list of objects read from the given result set.
 	 * 
-	 * @param rs Result set which represents a SQL query result.
+	 * @param resultSet Result set which represents a SQL query result.
 	 * @return List of objects read from the given result set.
 	 * @throws java.lang.Exception if an unmatched key value is provided.
 	 */
@@ -38,8 +38,9 @@ public interface OpstiDomenskiObjekat extends Serializable {
 	/**
 	 * Returns a list of class objects, if the class has a List type attribute. If
 	 * not, it returns null.
-	 * 
+	 * @param resultSet Result set which represents a SQL query result.
 	 * @return List of objects equal to the class attribute.
+	 * @throws java.lang.Exception if an unmatched key value is provided.
 	 */
 	public OpstiDomenskiObjekat getResult(ResultSet resultSet) throws Exception;
 

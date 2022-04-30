@@ -51,7 +51,7 @@ public class TerminTestiranja implements OpstiDomenskiObjekat {
 	 * @param datum              TerminTestiranja office number as a Date.
 	 * @param napomena           TerminTestiranja footnote as a String.
 	 * @param pacijent           TerminTestiranja choosen patient as domen.Pacijent.
-	 * @param Laborant           TerminTestiranja choosen laborant as
+	 * @param laborant           TerminTestiranja choosen laborant as
 	 *                           domen.Laborant.
 	 */
 	public TerminTestiranja(Long terminTestiranjaId, Date datum, String napomena, Pacijent pacijent,
