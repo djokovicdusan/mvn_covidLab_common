@@ -52,6 +52,11 @@ class AdministratorTest {
 
 		assertThrows(java.lang.RuntimeException.class, () -> administrator.setKorisnickoIme("du"));
 	}
+	@Test
+	void testGetKorisnickoImeNull() {
+		
+		assertThrows(java.lang.NullPointerException.class, () -> administrator.setKorisnickoIme(null));
+	}
 
 	@Test
 	void testGetLozinka() {
