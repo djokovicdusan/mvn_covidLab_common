@@ -1,8 +1,9 @@
-package rs.ac.fon.nprog.mvn_covidLab_common;
+package domen;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.sql.ResultSet;
+import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
 
@@ -109,6 +110,8 @@ class PacijentTest {
 	@Test
 	void testGetResult() {
 		try {
+			rs = Mockito.mock(ResultSet.class);
+			Mockito.when(rs.next()).thenReturn(false);
 			assertNull(pacijent.getResult(rs));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -126,7 +129,8 @@ class PacijentTest {
 			Mockito.when(rs.getLong("laborantId")).thenReturn((long) 13);
 			Mockito.when(rs.getString("ime")).thenReturn("Pera");
 			Mockito.when(rs.getString("prezime")).thenReturn("Peric");
-			Mockito.when(new Date(rs.getDate("datumRodjenja").getTime())).thenReturn(new Date(1999, 16, 16));
+//			Date fakeDate = new Date(0);
+			Mockito.when(rs.getDate("datumRodjenja")).thenReturn(new java.sql.Date(0));
 			Mockito.when(rs.getString("telefon")).thenReturn("test");
 			Mockito.when(rs.getString("email")).thenReturn("test");
 			Mockito.when(rs.next()).thenReturn(true).thenReturn(false);
@@ -143,7 +147,7 @@ class PacijentTest {
 			assertEquals("Peric", pacijentDummy.getPrezime());
 			assertEquals("test", pacijentDummy.getEmail());
 			assertEquals("test", pacijentDummy.getTelefon());
-			assertEquals(new Date(1999, 16, 16), pacijentDummy.getDatumRodjenja());
+			assertEquals(new java.sql.Date(0), pacijentDummy.getDatumRodjenja());
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

@@ -1,4 +1,4 @@
-package rs.ac.fon.nprog.mvn_covidLab_common;
+package domen;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -100,6 +100,8 @@ class TerminTestiranjaTest {
 	@Test
 	void testGetResult() {
 		try {
+			rs = Mockito.mock(ResultSet.class);
+			Mockito.when(rs.next()).thenReturn(false);
 			assertNull(terminTestiranja.getResult(rs));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -116,7 +118,7 @@ class TerminTestiranjaTest {
 			Mockito.when(rs.getLong("id")).thenReturn((long) 13);
 			Mockito.when(rs.getLong("laborantId")).thenReturn((long) 13);
 			Mockito.when(rs.getLong("pacijentId")).thenReturn((long) 13);
-			Mockito.when(new Date(rs.getDate("datum").getTime())).thenReturn(new Date(1999, 16, 16));
+			Mockito.when(rs.getDate("datum")).thenReturn(new java.sql.Date(0));
 			Mockito.when(rs.getString("napomena")).thenReturn("test");
 			Mockito.when(rs.next()).thenReturn(true).thenReturn(false);
 
@@ -130,7 +132,7 @@ class TerminTestiranjaTest {
 			assertEquals(13, terminTestiranjaDummy.getLaborant().getLaborantId());
 			assertEquals("test", terminTestiranjaDummy.getNapomena());
 
-			assertEquals(new Date(1999, 16, 16), terminTestiranjaDummy.getDatum());
+			assertEquals(new java.sql.Date(0), terminTestiranjaDummy.getDatum());
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

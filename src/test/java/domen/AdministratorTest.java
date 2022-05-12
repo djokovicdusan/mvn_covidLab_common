@@ -1,4 +1,4 @@
-package rs.ac.fon.nprog.mvn_covidLab_common;
+package domen;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -81,6 +81,8 @@ class AdministratorTest {
 	@Test
 	void testGetResult() {
 		try {
+			rs = Mockito.mock(ResultSet.class);
+			Mockito.when(rs.next()).thenReturn(false);
 			assertNull(administrator.getResult(rs));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

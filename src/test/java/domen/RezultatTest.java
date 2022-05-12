@@ -1,4 +1,4 @@
-package rs.ac.fon.nprog.mvn_covidLab_common;
+package domen;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -73,6 +73,8 @@ class RezultatTest {
 	@Test
 	void testGetResult() {
 		try {
+			rs = Mockito.mock(ResultSet.class);
+			Mockito.when(rs.next()).thenReturn(false);
 			assertNull(rezultat.getResult(rs));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
