@@ -103,6 +103,8 @@ public class TerminTestiranja implements OpstiDomenskiObjekat {
 	 * @param datum Date as Date.
 	 */
 	public void setDatum(Date datum) {
+		if (datum == null)
+			throw new NullPointerException("Morate uneti datum");
 		this.datum = datum;
 	}
 

@@ -62,6 +62,10 @@ class TerminTestiranjaTest {
 		terminTestiranja.setDatum(new Date(1999, 16, 16));
 		assertEquals(new Date(1999, 16, 16), terminTestiranja.getDatum());
 	}
+	@Test
+	void testGetDatumNull() {
+		assertThrows(java.lang.NullPointerException.class, () -> terminTestiranja.setDatum(null));
+	}
 
 	@Test
 	void testGetNapomena() {
