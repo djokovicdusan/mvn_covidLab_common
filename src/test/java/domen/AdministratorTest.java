@@ -48,6 +48,12 @@ class AdministratorTest {
 	}
 
 	@Test
+	void testGetKorisnickoImeShortString() {
+
+		assertThrows(java.lang.RuntimeException.class, () -> administrator.setKorisnickoIme("du"));
+	}
+
+	@Test
 	void testGetLozinka() {
 		administrator.setLozinka("password");
 		assertEquals("password", administrator.getLozinka());
@@ -128,15 +134,17 @@ class AdministratorTest {
 	void testGetUnknownValues() {
 		assertEquals("?,?,?,?", administrator.getUnknownValues());
 	}
+
 	@Test
 	void testGetId() {
 		administrator.setKorisnickoIme("djokovicdusan");
-		assertEquals("djokovicdusan",administrator.getID(administrator));
+		assertEquals("djokovicdusan", administrator.getID(administrator));
 	}
+
 	@Test
 	void testGetOrderCondition() {
-		
-		assertEquals("username",administrator.getOrderCondition());
+
+		assertEquals("username", administrator.getOrderCondition());
 	}
 
 }

@@ -63,9 +63,18 @@ class PacijentTest {
 	}
 
 	@Test
+	void testGetImeShortString() {
+		assertThrows(java.lang.RuntimeException.class, () -> pacijent.setIme("d"));
+	}
+
+	@Test
 	void testGetPrezime() {
 		pacijent.setPrezime("Peric");
 		assertEquals("Peric", pacijent.getPrezime());
+	}
+	@Test
+	void testGetPrezimeShortString() {
+		assertThrows(java.lang.RuntimeException.class, () -> pacijent.setPrezime("d"));
 	}
 
 	@Test

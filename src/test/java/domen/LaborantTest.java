@@ -52,11 +52,19 @@ class LaborantTest {
 		laborant.setIme("Pera");
 		assertEquals("Pera", laborant.getIme());
 	}
+	@Test
+	void testGetImeShortString() {
+		assertThrows(java.lang.RuntimeException.class, () -> laborant.setIme("d"));
+	}
 
 	@Test
 	void testGetPrezime() {
 		laborant.setPrezime("Peric");
 		assertEquals("Peric", laborant.getPrezime());
+	}
+	@Test
+	void testGetPrezimeShortString() {
+		assertThrows(java.lang.RuntimeException.class, () -> laborant.setPrezime("d"));
 	}
 
 	@Test

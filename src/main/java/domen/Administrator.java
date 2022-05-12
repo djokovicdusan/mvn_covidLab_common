@@ -72,6 +72,10 @@ public class Administrator implements OpstiDomenskiObjekat {
 	 * @param korisnickoIme Username as a String.
 	 */
 	public void setKorisnickoIme(String korisnickoIme) {
+		if (korisnickoIme == null)
+			throw new NullPointerException("Morate uneti korisnicko ime");
+		if (korisnickoIme.length() < 3)
+			throw new IllegalArgumentException("Korisnicko ime mora sadrzati bar 3 znaka");
 		this.korisnickoIme = korisnickoIme;
 	}
 

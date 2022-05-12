@@ -109,8 +109,11 @@ public class Pacijent implements OpstiDomenskiObjekat {
 	 * @param ime First name as a String.
 	 */
 	public void setIme(String ime) {
+		if (ime.length() < 2)
+			throw new IllegalArgumentException("Ime mora sadrzati bar 2 znaka");
 		this.ime = ime;
 	}
+
 
 	/**
 	 * Returns Patient's last name.
@@ -127,6 +130,8 @@ public class Pacijent implements OpstiDomenskiObjekat {
 	 * @param prezime Last name as a String.
 	 */
 	public void setPrezime(String prezime) {
+		if (prezime.length() < 2)
+			throw new IllegalArgumentException("Prezime mora sadrzati bar 2 znaka");
 		this.prezime = prezime;
 	}
 
