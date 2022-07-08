@@ -118,6 +118,8 @@ class PacijentTest {
 
 	@Test
 	void testGetResult() {
+		// to-do
+		// remove try catch blocks from all test methods
 		try {
 			rs = Mockito.mock(ResultSet.class);
 			Mockito.when(rs.next()).thenReturn(false);

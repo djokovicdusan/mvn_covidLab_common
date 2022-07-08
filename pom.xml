@@ -5,7 +5,7 @@
 
 	<groupId>rs.ac.fon.nprog</groupId>
 	<artifactId>mvn_covidLab_common</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 
 	<name>mvn_covidLab_common</name>
 	<!-- FIXME change it to the project's website -->
